@@ -50,3 +50,42 @@ google-genai==1.11.0
 PyMySQL==1.1.1
 pandas==2.2.3
 numpy==2.1.3
+```
+
+## 🚀 Running the ChatDB CLI
+
+Example startup:
+```
+Welcome to ChatDB CLI for MySQL!
+Fetching database metadata...
+Database metadata retrieved and cached.
+Select voting mode:
+1. Base Voting (high accuracy, slower)
+2. Fast Voting (faster, GPT-prioritized)
+3. Simple Voting (simple, only GPT)
+Enter 1, 2 or 3 to select a mode:
+```
+
+- Use `exit` to quit the program.
+
+---
+
+## ⚡ Modes Summary
+
+| Mode         | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| **Simple**  | Fastest, uses only GPT to generate SQL. Best for simple, clear queries.     |
+| **Fast**    | GPT generates SQL, Cohere & Gemini vote to validate. Balance of speed + accuracy. |
+| **Base**    | All three models generate + vote; most accurate but slowest.               |
+
+You can switch modes during runtime by typing `1`, `2`, `3`.
+
+---
+
+## 💬 Usage Example
+
+```text
+Enter your command: Show me all tables
+```
+
+---
